@@ -1,0 +1,11 @@
+{
+  "name": "iom-knowledge-test",
+  "version": "1.0.0",
+  "description": "Life in the Isle of Man – Knowledge Tests",
+  "scripts": {
+    "start": "serve . --single --listen $PORT"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
