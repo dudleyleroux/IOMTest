@@ -9,7 +9,7 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #1a3a5c 0%, #2e6da4 50%, #1a3a5c 100%);
+      background: #fff;
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -28,7 +28,7 @@
 
     /* ── Header ── */
     .header {
-      background: linear-gradient(90deg, #1a3a5c, #2e6da4);
+      background: linear-gradient(90deg, #4C1D95, #5B21B6);
       color: #fff;
       padding: 28px 32px 20px;
       text-align: center;
@@ -71,7 +71,7 @@
     }
     .meta .score-live {
       font-weight: 600;
-      color: #2e6da4;
+      color: #F97316;
     }
 
     /* ── Question card ── */
@@ -81,7 +81,7 @@
     .question-text {
       font-size: 1.1rem;
       font-weight: 600;
-      color: #1a3a5c;
+      color: #4C1D95;
       line-height: 1.5;
       margin-bottom: 20px;
     }
@@ -108,8 +108,8 @@
       width: 100%;
     }
     .option-btn:hover:not(:disabled) {
-      background: #e8f0fb;
-      border-color: #2e6da4;
+      background: #EDE9FE;
+      border-color: #5B21B6;
       transform: translateX(3px);
     }
     .option-btn .letter {
@@ -176,7 +176,7 @@
       justify-content: flex-end;
     }
     .btn-next {
-      background: linear-gradient(90deg, #1a3a5c, #2e6da4);
+      background: #F97316;
       color: #fff;
       border: none;
       border-radius: 8px;
@@ -195,12 +195,11 @@
       padding: 32px 32px 36px;
       text-align: center;
     }
-    .results-icon { font-size: 3.5rem; margin-bottom: 12px; }
-    #results h2 { font-size: 1.7rem; color: #1a3a5c; margin-bottom: 8px; }
+    #results h2 { font-size: 1.7rem; color: #4C1D95; margin-bottom: 8px; }
     .final-score {
       font-size: 3rem;
       font-weight: 800;
-      color: #2e6da4;
+      color: #F97316;
       margin: 10px 0 4px;
     }
     .score-label { font-size: 1rem; color: #555; margin-bottom: 20px; }
@@ -236,7 +235,7 @@
     .summary-item.red   .num { color: #dc3545; }
 
     .btn-restart {
-      background: linear-gradient(90deg, #1a3a5c, #2e6da4);
+      background: #F97316;
       color: #fff;
       border: none;
       border-radius: 8px;
@@ -254,7 +253,7 @@
       text-align: center;
     }
     #start-screen .flag { font-size: 3rem; margin-bottom: 14px; }
-    #start-screen h2 { font-size: 1.5rem; color: #1a3a5c; margin-bottom: 10px; }
+    #start-screen h2 { font-size: 1.5rem; color: #4C1D95; margin-bottom: 10px; }
     #start-screen p { color: #555; line-height: 1.6; max-width: 500px; margin: 0 auto 24px; }
     .start-info {
       display: flex;
@@ -264,15 +263,15 @@
       flex-wrap: wrap;
     }
     .info-chip {
-      background: #e8f0fb;
-      color: #1a3a5c;
+      background: #EDE9FE;
+      color: #4C1D95;
       border-radius: 20px;
       padding: 7px 16px;
       font-size: 0.88rem;
       font-weight: 600;
     }
     .btn-start {
-      background: linear-gradient(90deg, #1a3a5c, #2e6da4);
+      background: #F97316;
       color: #fff;
       border: none;
       border-radius: 8px;
@@ -295,7 +294,6 @@
 <body>
 <div class="container">
   <div class="header">
-    <div class="flag">🏝️</div>
     <h1>Life in the Isle of Man</h1>
     <p>Knowledge Test – 50 Questions</p>
   </div>
@@ -303,7 +301,6 @@
 
   <!-- Start screen -->
   <div id="start-screen">
-    <div class="flag">📋</div>
     <h2>Ready to begin?</h2>
     <p>This test covers the history, government, culture, law, and everyday life of the Isle of Man, based on the official guide for new residents.</p>
     <div class="start-info">
@@ -332,7 +329,6 @@
 
   <!-- Results -->
   <div id="results">
-    <div class="results-icon" id="results-icon"></div>
     <h2>Test Complete!</h2>
     <div class="final-score" id="final-score"></div>
     <div class="score-label">out of 50 questions</div>
@@ -865,18 +861,14 @@ function showResults() {
   document.getElementById('res-wrong').textContent = questions.length - score;
   document.getElementById('res-pct').textContent = pct + '%';
 
-  const icon = document.getElementById('results-icon');
   const band = document.getElementById('grade-band');
   if (pct >= 80) {
-    icon.textContent = '🏆';
     band.className = 'grade-band grade-distinction';
     band.textContent = 'Distinction – Excellent!';
   } else if (pct >= 60) {
-    icon.textContent = '✅';
     band.className = 'grade-band grade-pass';
     band.textContent = 'Pass – Well Done!';
   } else {
-    icon.textContent = '📚';
     band.className = 'grade-band grade-fail';
     band.textContent = 'Keep Studying – You Can Do It!';
   }
