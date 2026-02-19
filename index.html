@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life in the Isle of Man – Knowledge Tests</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+      max-width: 680px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(90deg, #4C1D95, #5B21B6);
+      color: #fff;
+      padding: 32px 32px 24px;
+      text-align: center;
+    }
+    .header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: 0.4px; }
+    .header p  { font-size: 0.92rem; opacity: 0.85; margin-top: 6px; }
+
+    .progress-wrap { background: #e9ecef; height: 6px; }
+
+    .body { padding: 36px 32px 40px; }
+
+    .intro {
+      color: #444;
+      line-height: 1.65;
+      margin-bottom: 32px;
+      font-size: 0.97rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .card {
+      border: 2px solid #EDE9FE;
+      border-radius: 12px;
+      padding: 24px 20px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s, box-shadow 0.15s, transform 0.1s;
+      display: block;
+    }
+    .card:hover {
+      border-color: #5B21B6;
+      box-shadow: 0 4px 16px rgba(91,33,182,0.12);
+      transform: translateY(-2px);
+    }
+    .card .card-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #5B21B6;
+      background: #EDE9FE;
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .card h2 {
+      font-size: 1.05rem;
+      color: #4C1D95;
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 0.85rem;
+      color: #666;
+      line-height: 1.5;
+    }
+    .card .card-cta {
+      display: inline-block;
+      margin-top: 16px;
+      background: #F97316;
+      color: #fff;
+      border-radius: 7px;
+      padding: 8px 18px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: opacity 0.15s;
+    }
+    .card:hover .card-cta { opacity: 0.88; }
+
+    .note {
+      background: #EDE9FE;
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 0.85rem;
+      color: #4C1D95;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 500px) {
+      .cards { grid-template-columns: 1fr; }
+      .body { padding: 24px 18px 28px; }
+      .header { padding: 24px 18px 18px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Life in the Isle of Man</h1>
+    <p>Knowledge Tests for Settlement &amp; British Nationality applicants</p>
+  </div>
+  <div class="progress-wrap"></div>
+
+  <div class="body">
+    <p class="intro">
+      These tests are based on the <em>Life in the Isle of Man</em> supplement to the official
+      "Life in the United Kingdom" guide. Together they cover the history, government, culture,
+      language, law, and everyday life of the Isle of Man across 100 questions.
+    </p>
+
+    <div class="cards">
+      <a class="card" href="/iom_test.html">
+        <span class="card-label">Test 1</span>
+        <h2>Core Topics</h2>
+        <p>Location, history, government, parliament, culture, TT races, language and law.</p>
+        <span class="card-cta">Start Test 1 &rarr;</span>
+      </a>
+      <a class="card" href="/iom_test2.html">
+        <span class="card-label">Test 2</span>
+        <h2>Gap Topics</h2>
+        <p>Economy, housing, health, social security, employment, legal system and Manx culture details.</p>
+        <span class="card-cta">Start Test 2 &rarr;</span>
+      </a>
+    </div>
+
+    <div class="note">
+      Each test draws 50 questions at random from a larger pool, so every attempt will be different.
+      A score of 80% or above earns a Distinction; 60–79% is a Pass.
+    </div>
+  </div>
+</div>
+</body>
+</html>
